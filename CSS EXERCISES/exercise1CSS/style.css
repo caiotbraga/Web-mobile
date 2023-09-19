@@ -1,0 +1,9 @@
+body{
+    background-image: url(img/background.jpg);
+    background-size: cover;
+}
+
+#title{
+    color: red;
+    border: 2px solid green;
+}
