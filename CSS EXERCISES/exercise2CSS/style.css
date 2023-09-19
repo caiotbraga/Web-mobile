@@ -1,0 +1,17 @@
+#div-one{
+    background-color: red;
+    width: 700px;
+    padding: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#div-two{
+    background-color: green;
+    width: 700px;
+    padding: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
