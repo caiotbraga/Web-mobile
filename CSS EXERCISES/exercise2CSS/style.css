@@ -1,4 +1,4 @@
-#div-one{
+/* #div-one{
     background-color: red;
     width: 700px;
     padding: 0px;
@@ -14,4 +14,20 @@
     position: absolute;
     top: 50%;
     left: 50%;
+} */
+
+#div-one {
+    width: 700px;
+    background-color: red;
+    padding: 0;
+    margin: auto;
+    text-align: center;
+}
+
+#div-two {
+    width: 700px;
+    background-color: green;
+    padding: 25px;
+    margin: auto;
+    text-align: center;
 }
