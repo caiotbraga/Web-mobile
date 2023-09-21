@@ -1,20 +1,29 @@
 .showcase{
-    background-color: green;
     text-align: center;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    width: 270px;
-    height:340px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.product{
+    background-color: green;
+    padding: 20px;
+    height: 330px;
+    border-radius: 20px;
 }
 
 .shoe-img{
-    /* position: absolute; */
-    max-width: 100%;
-    max-height: 100%;
+    width: 250px;
+    height: 200px;
+    max-width: auto;
+    max-height: auto;
+    border-radius: 20px;
 }
 
-.shoe-title{
-    /* text-align: center; */
-
+#baseboard{
+    background-color: grey;
+    border-radius: 20px;
+    text-align: center;
+    width: 1850px;
+    height: 40px;
 }
