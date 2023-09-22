@@ -1,9 +1,7 @@
-#dado {
-    width: 100px;
-    height: 100px;
-    padding: 50px;
-}
-
 .block{
     background-color: grey;
+    border-radius: 22px;
+    width: 400px;
+    height: 320px;
+    text-align: center;
 }
