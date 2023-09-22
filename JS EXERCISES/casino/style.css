@@ -1,0 +1,9 @@
+#dado {
+    width: 100px;
+    height: 100px;
+    padding: 50px;
+}
+
+.block{
+    background-color: grey;
+}
