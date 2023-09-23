@@ -1,7 +1,13 @@
 .block{
-    background-color: grey;
+    background-color: rgb(0, 129, 15);
     border-radius: 22px;
     width: 400px;
     height: 320px;
     text-align: center;
+    margin: auto;
+}
+
+#background-img{
+    background-image: url(img/background-image.webp);
+    background-size: cover; 
 }
