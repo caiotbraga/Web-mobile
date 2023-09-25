@@ -1,13 +1,45 @@
 .block{
     background-color: rgb(0, 129, 15);
     border-radius: 22px;
-    width: 400px;
+    width: 450px;
     height: 320px;
-    text-align: center;
+    /* text-align: center; */
     margin: auto;
 }
 
 #background-img{
     background-image: url(img/background-image.webp);
     background-size: cover; 
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    margin-left: 10px;
+}
+
+.dices-block{
+    width: 450px;
+    height: 190px;
+    background-color: grey;
+    border-radius: 22px;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#dice-1{
+    border-radius: 20px;
+    position: absolute;
+    left: 490px;
+    top: 360px;
+}
+
+#dice-2{
+    border-radius: 20px;
+    position: absolute;
+    right: 490px;
+    top: 360px;
 }
