@@ -70,11 +70,11 @@ function calculate(){
 
         if(sum === 7 || sum === 11){
             setTimeout(function() {
-                alert("Você ganhou o jogo!");
+                alert("You won the game!");
               }, 1000);
         }else if(sum === 2 || sum === 3 ||sum === 12){
             setTimeout(function() {
-                alert("Você perdeu o jogo!");
+                alert("You lost the game!");
               }, 1000);
         }else{
             point = sum
