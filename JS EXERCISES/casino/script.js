@@ -1,30 +1,50 @@
-document.getElementById("dice-button").onclick = drawNumber();
+document.getElementById("dice-button").onclick = function(){drawNumber1()};
 
-function drawNumber(){
-    var d1 = getRandomNumber();
-    var d2 = getRandomNumber();
+function drawNumber1(){
+    d1 = getRandomNumber();;
+    
+    if(d1 === 1){
+        document.getElementById("dice-1").src = "imagens/dice-1.jgp"
+    }
+    else if(d1 === 2){
+        document.getElementById("dice-1").src = "imagens/dice-2.jpg"
+    }
+    else if(d1 === 3){
+        document.getElementById("dice-1").src = "imagens/dice-3.jpg"
+    }
+    else if(d1 === 4){
+        document.getElementById("dice-1").src = "imagens/dice-4.jpg"
+    }
+    else if(d1 === 5){
+        document.getElementById("dice-1").src = "imagens/dice-5.jpg"
+    }
+    else if(d1 === 6){
+        document.getElementById("dice-1").src = "imagens/dice-6.jpg"
+    }
 
-    switch (d1) {
-        case 1:
-            var img = document.getElementById("dice-1").src = 'dice-1.jpg'
-            break;
-        case 2:
-            var img = document.getElementById("dice-1").src = 'dice-2.jpg'
-            break;
-        case 3:
-            var img = document.getElementById("dice-1").src = 'dice-3.jpg'
-            break;
-        case 4:
-            var img = document.getElementById("dice-1").src = 'dice-4.jpg'
-            break;
-        case 5:
-            var img = document.getElementById("dice-1").src = 'dice-5.jpg'
-            break;
-        case 6:
-            var img = document.getElementById("dice-1").src = 'dice-6.jpg'
-            break;
-        default:
-            break;
+    drawNumber2();
+}
+
+function drawNumber2(){
+    d2 = getRandomNumber();;
+    
+    if(d2 === 1){
+        document.getElementById("dice-2").src = "imagens/dice-1.jgp"
+    }
+    else if(d2 === 2){
+        document.getElementById("dice-2").src = "imagens/dice-2.jpg"
+    }
+    else if(d2 === 3){
+        document.getElementById("dice-2").src = "imagens/dice-3.jpg"
+    }
+    else if(d2 === 4){
+        document.getElementById("dice-2").src = "imagens/dice-4.jpg"
+    }
+    else if(d2 === 5){
+        document.getElementById("dice-2").src = "imagens/dice-5.jpg"
+    }
+    else if(d2 === 6){
+        document.getElementById("dice-2").src = "imagens/dice-6.jpg"
     }
 }
 
