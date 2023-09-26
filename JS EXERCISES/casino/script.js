@@ -1,5 +1,5 @@
-var d1 = getRandomNumber();
-var d2 = getRandomNumber();
+var d1;
+var d2;
 var sum;
 var firstRound = true;
 var point;
@@ -7,7 +7,7 @@ var point;
 document.getElementById("dice-button").onclick = function(){drawNumber1()};
 
 function drawNumber1(){
-    
+    d1 = getRandomNumber();
     if(d1 === 1){
         document.getElementById("dice-1").src = "img/dice-1.jgp"
     }
@@ -31,8 +31,7 @@ function drawNumber1(){
 }
 
 function drawNumber2(){
-    
-    
+    d2 = getRandomNumber();
     if(d2 === 1){
         document.getElementById("dice-2").src = "img/dice-1.jpg"
     }
@@ -51,6 +50,8 @@ function drawNumber2(){
     else if(d2 === 6){
         document.getElementById("dice-2").src = "img/dice-6.jpg"
     }
+
+    calculate();
 }
 
 function getRandomNumber() {
@@ -64,9 +65,12 @@ function calculate(){
     sum = d1 + d2;
     
     if(firstRound){
+
+        document.getElementById("sum").innerHTML = "Sum: " + sum;
+
         if(sum === 7 || sum === 11){
             setTimeout(function() {
-                alert("Você perdeu o jogo!");
+                alert("Você ganhou o jogo!");
               }, 1000);
         }else if(sum === 2 || sum === 3 ||sum === 12){
             setTimeout(function() {
@@ -77,7 +81,11 @@ function calculate(){
             document.getElementById("point").innerHTML = "Point: " + point;
         }
         firstRound = false;
-    }else{
+    }
+    else{
+        
+        document.getElementById("sum").innerHTML = "Sum: " + sum;
+
         if(sum === point){
             setTimeout(function() {
                 alert("You won the game!");

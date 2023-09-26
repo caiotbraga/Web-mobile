@@ -7,23 +7,28 @@
     margin: auto;
 }
 
+.block-inside{
+    background-color: rgb(247, 246, 182);
+    border-radius: 20px;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 #background-img{
     background-image: url(img/background-image.webp);
-    background-size: cover; 
+    background-size: cover;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-h1{
+h1, h3{
     text-align: center;
-}
-
-p{
-    margin-left: 10px;
 }
 
 .dices-block{
     width: 450px;
     height: 190px;
-    background-color: grey;
+    background-color: rgb(243, 241, 241);
     border-radius: 22px;
     margin: auto;
     margin-top: 10px;
@@ -32,14 +37,25 @@ p{
 
 #dice-1{
     border-radius: 20px;
-    position: absolute;
-    left: 490px;
-    top: 360px;
+    margin-right: 30%;
 }
 
 #dice-2{
     border-radius: 20px;
-    position: absolute;
-    right: 490px;
-    top: 360px;
+}
+
+#dice-button{
+    
+}
+
+.sum .point {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.flex-box{
+    display: flex;
+}
+
+.col{
+    flex: 1;
 }
