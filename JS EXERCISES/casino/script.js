@@ -74,8 +74,22 @@ function calculate(){
               }, 1000);
         }else{
             point = sum
-            document.getElementById("ponto").innerHTML = "Ponto: " + ponto;
-
+            document.getElementById("point").innerHTML = "Point: " + point;
+        }
+        firstRound = false;
+    }else{
+        if(sum === point){
+            setTimeout(function() {
+                alert("You won the game!");
+              }, 1000);
+        }else if(sum === 7){
+            setTimeout(function() {
+                alert("You lost the game!");
+              }, 1000);
+        }else{
+            setTimeout(function() {
+                alert("Try again!");
+              }, 1000);
         }
     }
 }
