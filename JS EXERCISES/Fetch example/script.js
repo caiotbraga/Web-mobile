@@ -1,6 +1,6 @@
-const listaPessoas = document.getElementById("listaPessoas"); 
-const btAnterior = document.getElementById("btAnterior");
-const btProxima = document.getElementById("btProxima");
+const listaPessoas = document.getElementById("list"); 
+const btAnterior = document.getElementById("btPrevious");
+const btProxima = document.getElementById("btNext");
 
 const exibirLista = (lista, start) => {
   listaPessoas.innerHTML = "";
@@ -20,24 +20,25 @@ const configurarBotoes = (data) => {
 
   btAnterior.disabled = previous === null;
   btAnterior.onclick = () => {
-    fetchAPI2(previous);
+    fetchAPI(previous);
     btAnterior.disabled = true;
   };
 
   btProxima.disabled = next === null;
   btProxima.onclick = () => {
-    fetchAPI2(next);
+    fetchAPI(next);
     btProxima.disabled = true;
   };
 };
 
 const fetchAPI = (url) => {
+  const start = Number(url.split("=")[1]) * 10 - 9;
   fetch(url)
     .then((response) => {
       return response.json();
     })
     .then((data) => {
-      exibirLista(data.results);
+      exibirLista(data.results, start);
       configurarBotoes(data);
     });
 };
@@ -56,4 +57,4 @@ const fetchAPI2 = async (url) => {
   }
 };
 
-fetchAPI2("https://swapi.dev/api/people/?page=1");
+fetchAPI("https://swapi.dev/api/people/?page=1");
