@@ -4,24 +4,29 @@ const bairro = document.getElementById("bairro");
 const localidade = document.getElementById("localidade");
 const uf = document.getElementById("uf");
 
-var c = cep.addEventListener('keyup', function(event) {
+cep.addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
         c = this.value;
+        fetchAPI("https://viacep.com.br/ws/"+c+"/json/")
     }
 });
 
-const fetchAPI = (url) =>{
+fetchAPI = (url) =>{
     fetch(url)
     .then((response) => {
-        console.log(response)
+        return response.json();
     })
+    .then((data) => {
+        showAddress(data);
+    });
+};
+
+const showAddress = (address) => {
+    logradouro.textContent = `Rua : ${address.logradouro}`;
+    bairro.textContent = `Bairro : ${address.bairro}`;
+    localidade.textContent = `Cidade : ${address.localidade}`;
+    uf.textContent = `Estado : ${address.uf}`;
 }
 
-// const showAdress = (adress) => {
-//     logradouro = document.createTextNode(`Rua : ${adress.lagradouro}`)
-//     bairro = document.createTextNode(`Bairro : ${adress.bairro}`)
-//     localidade = document.createTextNode(`Cidade : ${adress.localidade}`)
-//     uf = document.createTextNode(`Estado : ${adress.uf}`)
-// }
+    
 
-fetchAPI("viacep.com.br/ws/"+c+"/json/")
